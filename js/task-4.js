@@ -16,9 +16,6 @@ class StringBuilder {
   get value() {
     return this._value;
   }
-  set value(str) {
-    console.log(str);
-  }
   append(str) {
     this._value += str;
   }
@@ -27,7 +24,8 @@ class StringBuilder {
   }
   pad(str) {
     this.append(str);
-    this.pad(str);
+    this.prepend(str);
+    // this._value = str + this._value + str;
   }
 }
 
